@@ -29,6 +29,7 @@ Cooperation algorithm between these three metaheuristics:
 <ul>
  <li> <H4> Java </H4> </li> 
  <li> <H4> JavaFX with sceneBuilder </H4> </li> 
+ <li> <H4> XML </H4> </li>  
 </ul>
 
 <H3> Software screens : </H3>
