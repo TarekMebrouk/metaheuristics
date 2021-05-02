@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="Parametrage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="890.0" style="-fx-background-color: #F0F4C3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Demo.ControllerParametrage">
+   <children>
+      <HBox layoutX="80.0" layoutY="48.0" prefHeight="409.0" prefWidth="735.0" spacing="35.0">
+         <children>
+            <VBox prefHeight="409.0" prefWidth="219.0">
+               <children>
+                  <Label prefHeight="69.0" prefWidth="235.0" text="     Recuit simulé" textFill="#7cb342">
+                     <font>
+                        <Font name="Berlin Sans FB" size="27.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="358.0" prefWidth="204.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label layoutX="14.0" layoutY="20.0" prefHeight="27.0" prefWidth="30.0" text="T :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="85.0" prefHeight="27.0" prefWidth="30.0" text="α :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="T" layoutX="42.0" layoutY="20.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #7cb342; -fx-text-fill: white;" />
+                        <TextField fx:id="AlphaRS" layoutX="42.0" layoutY="85.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Button layoutX="140.0" layoutY="86.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="43.0" style="-fx-background-color: #AED581;" />
+                        <Label layoutX="14.0" layoutY="47.0" prefHeight="26.0" prefWidth="162.0" text="Temperature initiale" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="112.0" prefHeight="26.0" prefWidth="197.0" text="Parametre de reduction par palier" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="155.0" prefHeight="27.0" prefWidth="30.0" text="β :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="beta" layoutX="42.0" layoutY="155.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Label layoutX="11.0" layoutY="182.0" prefHeight="26.0" prefWidth="207.0" text="Parametre de reduction monotone" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="132.0" layoutY="310.0" mnemonicParsing="false" onAction="#CalculeParamRecuit" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #7cb342; -fx-background-radius: 30;" text="Calcul Auto" textFill="WHITE" />
+                        <Button layoutX="87.0" layoutY="304.0" mnemonicParsing="false" onAction="#playRecuit" prefHeight="36.0" prefWidth="43.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/play-button%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <VBox layoutX="3.0" layoutY="225.0" prefHeight="79.0" prefWidth="219.0" spacing="2.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="210.0" text="Choisissez le type de refroidissement :" textFill="WHITE" />
+                              <RadioButton fx:id="refAlea" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Aléatoire" textFill="WHITE" />
+                              <RadioButton fx:id="refPalier" mnemonicParsing="false" text="Refroidissement par palier" textFill="WHITE" />
+                              <RadioButton fx:id="refMono" mnemonicParsing="false" text="Refroidissement monotone" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox prefHeight="409.0" prefWidth="219.0">
+               <children>
+                  <Label prefHeight="69.0" prefWidth="235.0" text="  Algorithme Genetique" textFill="#7cb342">
+                     <font>
+                        <Font name="Berlin Sans FB" size="22.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="358.0" prefWidth="204.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label layoutX="14.0" layoutY="38.0" prefHeight="27.0" prefWidth="30.0" text="N :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="147.0" prefHeight="27.0" prefWidth="30.0" text="P :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AgN" layoutX="42.0" layoutY="39.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #7cb342; -fx-text-fill: white;" />
+                        <TextField fx:id="P" layoutX="42.0" layoutY="147.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Button layoutX="140.0" layoutY="86.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="43.0" style="-fx-background-color: #AED581;" />
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="26.0" prefWidth="162.0" text="Taille de la population" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="173.0" prefHeight="26.0" prefWidth="197.0" text="Probabilité de mutation" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="132.0" layoutY="310.0" mnemonicParsing="false" onAction="#CalculeParamGenetic" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #7cb342; -fx-background-radius: 30;" text="Calcul Auto" textFill="WHITE" />
+                        <Button layoutX="87.0" layoutY="304.0" mnemonicParsing="false" onAction="#playGenetic" prefHeight="36.0" prefWidth="43.0" style="-fx-background-color: #AED581; -fx-background-radius: 30;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/play-button%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <VBox layoutX="3.0" layoutY="225.0" prefHeight="79.0" prefWidth="219.0" spacing="2.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="210.0" text="Choisissez le type de remplacement :" textFill="WHITE" />
+                              <RadioButton fx:id="rempAlea" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Aléatoire" textFill="WHITE" />
+                              <RadioButton fx:id="rempPop" mnemonicParsing="false" text="Remplacement de population" textFill="WHITE" />
+                              <RadioButton fx:id="rempInc" mnemonicParsing="false" text="Remplacement incrémental" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox prefHeight="409.0" prefWidth="219.0">
+               <children>
+                  <Label prefHeight="69.0" prefWidth="235.0" text="            BBO" textFill="#7cb342">
+                     <font>
+                        <Font name="Berlin Sans FB" size="27.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="358.0" prefWidth="204.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label layoutX="14.0" layoutY="38.0" prefHeight="27.0" prefWidth="30.0" text="N :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="108.0" prefHeight="27.0" prefWidth="30.0" text="E :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="BBoN" layoutX="42.0" layoutY="39.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #7cb342; -fx-text-fill: white;" />
+                        <TextField fx:id="E" layoutX="42.0" layoutY="107.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Button layoutX="140.0" layoutY="86.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="43.0" style="-fx-background-color: #AED581;" />
+                        <Label layoutX="14.0" layoutY="65.0" prefHeight="26.0" prefWidth="162.0" text="Taille de la population" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="135.0" prefHeight="26.0" prefWidth="197.0" text="Taux maximum d'émigration" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="175.0" prefHeight="27.0" prefWidth="30.0" text="I :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="I" layoutX="42.0" layoutY="176.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Label layoutX="14.0" layoutY="202.0" prefHeight="26.0" prefWidth="207.0" text="Taux maximum de migration" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="132.0" layoutY="310.0" mnemonicParsing="false" onAction="#CalculeParamBBO" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #7cb342; -fx-background-radius: 30;" text="Calcul Auto" textFill="WHITE" />
+                        <Label layoutX="14.0" layoutY="243.0" prefHeight="27.0" prefWidth="30.0" text="α :" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="AlphaBBo" layoutX="42.0" layoutY="244.0" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-border-color: #7cb342; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;" />
+                        <Label layoutX="14.0" layoutY="270.0" prefHeight="26.0" prefWidth="207.0" text="Parametre de probabilité de mutation" textFill="WHITE" />
+                        <Button layoutX="87.0" layoutY="304.0" mnemonicParsing="false" onAction="#playBBo" prefHeight="36.0" prefWidth="43.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/play-button%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="80.0" layoutY="21.0" prefHeight="27.0" prefWidth="197.0" text="Nombre d'évaluations :" textAlignment="CENTER" textFill="#7cb342">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NombreEvaluation" alignment="CENTER" layoutX="280.0" layoutY="22.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #7cb342; -fx-text-fill: white;" />
+      <Button layoutX="761.5" layoutY="466.0" mnemonicParsing="false" onAction="#LancerExecution" prefHeight="27.0" prefWidth="124.0" style="-fx-background-color: #7cb342; -fx-background-radius: 20;" text="Lancer Cooperation" textFill="WHITE" />
+   </children>
+</Pane>

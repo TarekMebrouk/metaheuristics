@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="Statistique" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="890.0" style="-fx-background-color: #F0F4C3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Demo.ControllerStatistique">
+   <children>
+      <HBox layoutX="379.0" layoutY="63.0" prefHeight="60.0" prefWidth="500.0" spacing="25.0">
+         <children>
+            <Pane prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="fitness" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fitness" alignment="CENTER" layoutY="30.0" prefHeight="23.0" prefWidth="150.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="Nombre de capteurs" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NombreCapteurs" alignment="CENTER" layoutY="30.0" prefHeight="23.0" prefWidth="150.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #AED581; -fx-background-radius: 10 10 10 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="3.0" prefHeight="23.0" prefWidth="135.0" text="Taux de couverture" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Couverture" alignment="CENTER" layoutY="30.0" prefHeight="23.0" prefWidth="150.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Pane fx:id="pane" layoutX="372.0" layoutY="159.0" prefHeight="295.0" prefWidth="500.0" />
+      <VBox prefHeight="505.0" prefWidth="361.0">
+         <children>
+            <Pane prefHeight="295.0" prefWidth="356.0">
+               <children>
+                  <Pane fx:id="BarChartPanel" layoutY="59.0" prefHeight="235.0" prefWidth="360.0" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="12.0" prefHeight="23.0" prefWidth="335.0" text=" Comparaison entre Les trois Métaheuritiques " textFill="#6f9425">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="36.0" layoutY="35.0" prefHeight="15.0" prefWidth="267.0" text=" Utilisées dans la Coopération" textFill="#6f9425">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="13.0" layoutY="2.0" prefHeight="23.0" prefWidth="335.0" text="Taux de participantion pour chaque" textFill="#6f9425">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="25.0" prefHeight="23.0" prefWidth="335.0" text="Métaheuristique Dans la Coopération " textFill="#6f9425">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="PieChartPanel" layoutY="48.0" prefHeight="155.0" prefWidth="360.0" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

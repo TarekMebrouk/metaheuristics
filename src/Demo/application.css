@@ -1,0 +1,145 @@
+
+/*--------------------    MENU  ---------------------- */ 
+ #MenuButtun {
+ 	-fx-background-color:  #F0F4C3;
+ 	-fx-border-color :  #AED581;
+ 	-fx-border-width :  0px 0px 0px 3px;
+ }
+ 
+ #MenuButtun:pressed{
+ 	-fx-background-color: #aed581;
+ 	-fx-border-width :  0px 0px 0px 0px;
+ }
+ 
+ #MenuButtun:hover{
+ 	-fx-border-width :0px 0px 2px 0px;
+ 	-fx-border-color :   #B5C37E;
+ }
+/*--------------------------------------------------- */ 
+/*-------------------- Charts ----------------------- */ 
+.chart-content {
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+}
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 0px;
+}
+.chart-legend-item{
+    -fx-text-fill: #7cb342;
+}
+.chart-title {
+  -fx-text-fill: #7cb342;
+  -fx-font-size: 1.6em;
+}
+.axis-label {
+  -fx-text-fill: #7cb342;
+}
+.axis {
+    -fx-font-size: 1em;    
+    -fx-tick-label-fill: #596B30;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 3;
+    -fx-minor-tick-length: 4;
+}
+.axis-tick-mark {
+    -fx-stroke: #596B30;
+    -fx-stroke-width: 1; 
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #596B30;
+    -fx-stroke-width: 0.5;
+}
+.axis-label {
+  -fx-text-fill: #7cb342;
+}
+.chart-plot-background {
+	-fx-background-color: transparent;
+}
+.chart-vertical-grid-lines{
+ 	-fx-stroke: transparent;
+    -fx-stroke-width: 1; 
+}
+
+.chart-horizontal-grid-lines{
+	-fx-stroke: transparent;
+    -fx-stroke-width: 1; 
+}
+/*--------------------------------------------------- */ 
+/*----------------    ScatterChart  ----------------- */ 
+ .chart-symbol.series0{
+	-fx-background-color: #ff0000,#ff0000;
+	-fx-background-insets: 0, 3,5;
+	-fx-background-radius: 5px;
+	-fx-padding: 3px;
+}
+
+ .chart-symbol.series1{
+	-fx-background-color:  #000000,#000000;
+	-fx-background-insets: 0, 3.5;
+	-fx-background-radius: 5px;
+	-fx-padding: 1.8px;
+}
+/*--------------------------------------------------- */ 
+/*-----------------   ScrollPane  ------------------- */ 
+.scroll-pane{
+	-fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane:focused{
+    -fx-background-insets: 0;
+}
+
+.scroll-pane .corner{
+    -fx-background-insets: 0;
+}
+/*--------------------------------------------------- */ 
+/*------------------ BubbleChart -------------------- */ 
+.chart-bubble.series0{
+  /*  -fx-background-color: #1B761B;*/
+}
+
+.chart-bubble.series1{
+   /*-fx-background-color: #51E551;*/
+}
+
+.chart-bubble.series2{
+     -fx-background-color: #B22222;
+}
+
+.chart-bubble.series3{
+     -fx-background-color: #392121;
+}
+/*--------------------------------------------------- */ 
+/*-------------------- PieChart --------------------- */ 
+.default-color0.chart-pie { -fx-background-color: #ffd700; }
+.default-color1.chart-pie { -fx-background-color: #ffa500; }
+.default-color2.chart-pie { -fx-background-color: #860061; }
+.default-color3.chart-pie { -fx-background-color: #adff2f; }
+.default-color4.chart-pie { -fx-background-color: #ff5700; }
+ 
+.chart-pie-label-line {
+    -fx-stroke: #8b4513;
+    -fx-fill: #8b4513;
+}
+ 
+.chart-pie-label {
+    -fx-fill: #8b4513;
+    -fx-font-size: 1em;
+} 
+/*--------------------------------------------------- */ 
+/*------------------- LineChart --------------------- */ 
+.chart-series-line {    
+    -fx-stroke-width: 1.5px;
+    -fx-effect: null;
+}
+.default-color0.chart-series-line { -fx-stroke: #e9967a; }
+.default-color1.chart-series-line { -fx-stroke: #f0e68c; }
+.default-color2.chart-series-line { -fx-stroke: #dda0dd; }
+
+.default-color0.chart-line-symbol { -fx-background-color: #e9967a, white; }
+.default-color1.chart-line-symbol { -fx-background-color: #f0e68c, white; }
+.default-color2.chart-line-symbol { -fx-background-color: #dda0dd, white; }
+/*--------------------------------------------------- */ 
