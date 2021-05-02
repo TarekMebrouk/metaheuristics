@@ -1,6 +1,8 @@
 <H1> Minimization of the number of sensors in a WSN sensor network using metaheuristic cooperation </h1>
 
-<H6> End-of-study project in license year 2018/19. </H6>
+  <H6> University of Science and Technology USTHB </H6>
+  <H6> IT department </H6>
+  <H6> End-of-study project in license year (2018/2019) </H6>
 
 <H3> Problematic : </H3>
 In order to better exploit the performance and obtain the best expected results from
